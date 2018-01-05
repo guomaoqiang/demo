@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <style>
+    .app{
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+    .left {
+      width: 200px;
+      height: 100%;
+      background-color: red; 
+      /*float: left;*/
+      /*margin-left: -100%; */
+    }
+    .mid {
+      float: left;
+      height: 100%;
+      padding: 0 200px 0;
+    }
+    .middddd {
+      float: left;
+      height: 100%;
+      padding: 0 200px 0;
+    }
+    .right {
+      width: 200px;
+      height: 100%;
+      background-color: orange; 
+      position: absolute;
+      right: 0;
+      top: 0;
+      /*float: left;*/
+      /*margin-left: -200px; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <!-- <div class="middddd"> -->
+    <div class="mid">那么我们要使得三个元素在同一排显示。接下来我们要将 .left 和 .right 向上提。实际上我们是使用 margin-left 为 负值来实现的，我们将 .left 的 margin-left 设置为 -100%（负的中间子元素的宽度），这样，左边的元素就会被“提升”到上一层。</div>
+    <!-- </div> -->
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+  <input disabled="" value="1323232" />
+
+</body>
+
+</html>
