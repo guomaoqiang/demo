@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <dialog id="dialog" open>
+      <h2>笔试题目</h2>
+      <p>看js代码</p>
+      <p>实现一个LazyMan，可以按照以下方式调用:
+LazyMan(“Hank”)输出:
+Hi! This is Hank!
+
+LazyMan(“Hank”).sleep(10).eat(“dinner”)输出
+Hi! This is Hank!
+//等待10秒..
+Wake up after 10
+Eat dinner~</p>
+    </dialog>
+  </div>
+
+<script>
+function LazyMan(name) {
+  this.name = name;
+  console.log(`Hi! This is ${name}!`);
+}
+LazyMan.prototype.sleep = function(name) {
+  this.time = name;
+  return this;
+}
+LazyMan.prototype.eat = function(name) {
+  setTimeout(() => {
+      console.log(`Eat ${name}`)
+  },this.time*1000)
+}
+
+function aaa(name) {
+  return new LazyMan(name);
+}
+
+aaa('Hank').sleep(10).eat('dinner');
+
+</script>
+</body>
+
+</html>

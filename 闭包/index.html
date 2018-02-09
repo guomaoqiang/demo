@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="app">
+    </div>
+    <script>
+
+    function A() {
+        var ds;
+        var total = 1;
+        var times = 0;
+
+        return function(a) {
+            ++times;
+            if (times == 1) {
+                ds = a;
+            } else if (times == 2) {
+                for (var i = 0; i < a; i++) {
+                    total *= ds;
+                }
+            } else if (times === 3) {
+                console.log(total)
+            };
+
+
+        }
+    }
+
+    // var sum = A();
+    // sum(2);
+    // sum(3);
+    // sum();
+    </script>
+    <script type="text/javascript">
+    function throttle(func, wait, maxWait) {
+        let timeout = null
+        let startTime = new Date()
+        return function() {
+            let _this = this
+            let args = arguments
+            let curTime = new Date()
+            clearTimeout(timeout)
+            if (curTime - startTime >= maxWait) {
+                // 超过最大等待时间，进行事件处理
+                func.apply(_this, args)
+                startTime = curTime
+            } else {
+                // 进行节流，若没有下一次的事件触发，则将在timeout结束时进行事件处理
+                timeout = setTimeout(func, wait)
+            }
+        }
+    }
+    </script>
+    <script>  
+    function B() {
+      var result = 0;
+      return function() {
+        if (arguments.length>0) {
+          // result = [].slice.call(arguments).reduce((a,b) => {
+          //   return a+b;
+          // },result)
+          var c = arguments;
+          for (var i=0;i<c.length;i++) {
+            result += c[i]
+          }
+        } else {
+          console.log(result);
+        }
+      }
+    }
+
+    var BB = B();
+
+    // BB(2,3);
+    // BB(10,20,30);
+    // BB();
+
+    </script>
+
+<script>
+    function f(fn){
+      var result = [];
+      return function(){
+        if () {}
+        fn(arguments);
+      }
+    }
+
+    function sum() {
+      var b = 0;
+      return function (){
+
+      }
+    }
+
+
+
+</script>
+
+</body>
+
+</html>
