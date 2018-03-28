@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <style>
+    .app {
+      position: relative;
+      border: 1px solid red;
+      border-radius: 10px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .div {
+      position: absolute;
+      top: 10px;
+      z-index: -10;
+
+    }
+    .input {
+      border: 0;
+      width: 400px;
+      height: 50px;
+      font-size: 20px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <div class="div">非常好</div>
+    <form><input type="text" class="input" /></form>
+  </div>
+
+<script>
+  // document.querySelector('#dialog').showModal();
+  // setTimeout(() => {
+  //   document.querySelector('.app').className = 'app trans'; 
+  // })
+</script>
+</body>
+
+</html>

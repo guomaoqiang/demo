@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <style>
+    .app {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      transition: all 1s linear;
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+    .app.trans {
+      width: 50px;
+      height: 50px;
+      left: 200px;
+      top: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    
+  </div>
+
+<script>
+  // document.querySelector('#dialog').showModal();
+  setTimeout(() => {
+    document.querySelector('.app').className = 'app trans'; 
+  })
+</script>
+</body>
+
+</html>

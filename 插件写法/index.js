@@ -4,3 +4,11 @@
 }(this,function(a){
 	// console.log(a)
 }))
+
+;(function(a,b){
+
+}(window,document))
+
+;(function(){
+
+})();
