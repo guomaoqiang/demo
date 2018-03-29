@@ -4,11 +4,48 @@
 <head>
     <meta charset="utf-8">
     <style>
-
+    .app {
+        width: 0;
+        height: 0;
+        border: 20px solid;
+        border-color: red transparent transparent transparent;
+    }
+    .font {
+        font-size: 25px;
+        
+        line-height: 25px;
+    }
+    .p1 {
+        background-color: #000;
+        color: red;
+    }
+    .p2 {
+        background-color: red;
+        color: #fff;
+    }
+    .lh {
+        font-size: 30px;
+        height: 100px;
+        line-height: 100px;
+        background-color: #000;
+        color: red;
+        /*margin-bottom: 30px;*/
+    }
     </style>
 </head>
 
 <body>
+    <span class="app"></span>
+    <div class="lh">
+        行高行高行高行高行行高abcygh
+
+    </div>
+
+    <div class="font">
+            <p class="p1">行高行高行高行高行行高abcygh</p>
+            <p class="p2">行高行高行高行高行行高abcygh</p>
+    </div>
+
     <script>
     console.log(a)
     a();
